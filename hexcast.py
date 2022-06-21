@@ -16,9 +16,9 @@ import more_itertools
 #     hex_str = ''.join([hex(random.randint(0, 15)) for d in range(size)]).replace('0x', '')
 #     return hex_str
 #
-#
-# Set of canned prines for numbber of a given digit length. Utility set
 
+
+# Set of canned prines for a number of a given digit length. Utility set to make things a bit easier.
 PRIMES = {2: 7, 3: 127, 4: 2039, 5: 28031, 6: 280037, 7: 6000047, 8: 94217771, 10: 1647483757}
 
 
