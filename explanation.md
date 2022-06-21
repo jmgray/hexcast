@@ -1,18 +1,18 @@
 
-Problem Statement
+#### Problem Statement
 1. Every time you run the program, it should emit one 8-digit hexadecimal code;
 2. It should emit every possible code before repeating;
 3. It should not print "odd-looking" codes such as 0xAAAAAAAA or 0x01234567 or any commonly used words, phrases, or hexspeak such as 0xDEADBEEF;
 4. Codes should be emitted in apparently random order.
 
-### TL;DR
+#### TL;DR
 * Treat the list of Hexadecimal numbers as a 16 x 8 vector space (matrix)
 * Linearize this space into an array
 * Pick a random starting point in the array
 * Walk through the list by large steps mod the size of the list (steps are prime)
 * Filter out any unwanted string using standard password validation techniques
 
-### NTL;GD (Not too long; Gimme Details)
+#### NTL;GD (Not too long; Gimme Details)
 
 Apologies for the somewhat academic tone here. It's just what I do. :)
 
@@ -56,10 +56,10 @@ or `V · T `
 Of course, this all by way of research since we don't really need to calculate the index--it is inherent in simply positing the array itself.
 What we need is a way to get from the `index` to the `Vector`. To do that we need to iterate over the index, using a `T` array as listed above.<br>
 
-`v0 = Floor(index / t0)`
-`v1 = Floor((index - v0*t0) / t1)`
-...
-`vn = Remaining - v(n-1) * t(n-1)`
+`v0 = Floor(index / t0)`<br>
+`v1 = Floor((index - v0*t0) / t1)`<br>
+...<br>
+`vn = Remaining - v(n-1) * t(n-1)`<br>
 
 With that, there is a way to get from index to vector and it is easy to get then from vector to a hex string. 
 All that is needed to complete the problem is a suitable storage mechanism for persisting each interation and some filtering
@@ -79,7 +79,7 @@ I thought about randomizing the step or `leap` value, but that seemed too much f
 
 
 
-<sup>1 I suspect that the calculation for a non-cubic space would entail just a small modification but I don't know and did not care to explore the matter.</sup>
+<sup>1 I suspect that the calculation for a non-cubic space would entail just a small modification but I don't know it and did not care to explore the matter for this work. Perhaps you will!</sup>
 
 
 
