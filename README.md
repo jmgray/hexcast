@@ -19,18 +19,22 @@ The approach embodied in this code weas driven by several considerations:
 * It must somehow persist it's state between runs.
 * Item 4, `Codes should be emitted in apparently random order` implies that you must cycle through them cleverly.
 
-An explanation can be found in explanation.md
-
 To run the program do the following:
 1. create a virtual environment
-2. Acquire the code to this project, `git pull` or download
+2. Acquire the code to this project, either `git clone` or download it
 3. `pip install -r requirements.txt`
-4. Make sure the context in which the program runs has read/write privileges
+4. Make sure the context in which the program runs has write privileges. It uses an `ini` file.
 
 * The program has several commands:
   * `python hexcast init` initializes the current run with default values, creating an `hfa.ini`
   * `python hexcast sequence` displays the list of numbers to be emitted on subsequent calls
   * `python hexcast` emits the next number in the sequence
 
-
- 
+An explanation of this approach is in `explanation.md`
+I should state that I spent a day pondering how to approach this problem 
+and about another 2 days creating and testing the system. Aside from some mechanical issues, 
+such as looking for easy ways to extract chunks of arrays, and getting `sympy` to quickly find large primes,
+I did not do any research in solving this.
+When I had resolved to follow this method, I gave the problem to a friend, 
+who found a solution in 20 minutes using a reversible encryption technique, something I don't know much about.
+We use what we know. :)

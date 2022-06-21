@@ -233,7 +233,7 @@ class Hexinator(object):
         self.vector_dimension = hex_config.get_dimension()
         self.leap_distance = hex_config.get_leap()
         self.current_index = hex_config.get_index()
-        self.tiers = [self.vector_size ** v for v in range(self.vector_dimension - 1, 0, -1)] + [1]
+        self.tiers = [self.vector_size ** v for v in range(self.vector_dimension - 1, 0, -1)]#  + [1]
         self.linear_size = self.vector_size ** self.vector_dimension
         self.config = hex_config
 
@@ -280,17 +280,24 @@ class Hexinator(object):
         Returns the sequence for the next 'random' nmber to be emitted
         :return:
         """
+        print(self.tiers)
         lins = self.config.get_linear_size()
+        nseq = []
+        cseq = []
         # arbitrary but seems reasonable for this
         if lins < 1000:
             ld = self.config.get_leap()
             ci = self.config.get_startindex()
             cc = ''.join([str(d) for d in self._get_vector_from_index(ci)])
             seq = {cc: ci}
+            nseq.append(ci)
+            cseq.append(cc)
             for i in range(lins-1):
                 ci = (ci + ld) % lins
                 cc = ''.join([str(d) for d in self._get_vector_from_index(ci)])
                 seq[cc] = ci
+                nseq.append(ci)
+                cseq.append(cc)
             return seq
 
 
