@@ -25,10 +25,10 @@ There are various ways in which you can walk through a 2D matrix: Row-wise, colu
 For a small matrix this gives you a pseudo-random walk but for a matrix of any size the pattern reveals itself quickly.
 
 
-One tactic you might take would be to walk around the matrix taking larger steps. Instead of going to the next one in whatever your traversal mechanism is, jump two or three place. I visualized that on a matrix but realized quickly that convering the matrix to a list makes this tractable. With data in a in a linear format, this becomes simply rotating through the list. To make sure all of the items are visited the size of the rotation--thre step or "leap"--should ideally be co-prime to the size of the list. Simple prime numbers should work.
+One tactic you might take would be to walk around the matrix taking larger steps. Instead of going to the next one in whatever your traversal mechanism is, jump two or three,or more places instead. I visualized that on a matrix but realized quickly that converting the matrix to a simple list makes this a tractable problem. With data in a linear format, this becomes a problem of rotating through the list. To make sure all of the items are visited, the size of the rotation--the step or "leap"--should ideally be co-prime to the size of the list. Simple prime numbers should work.
 
 
-This approach should work but there were two challenges to solve. Actually only one but I am going to go about it in a roundabout way: We need to convert an index from our proposed linear array to a vector--semantically, a set of matrix coordinates into the matrix, and to do do _that_ it is easiest to go the other way first. I.e., from a vector to an index.
+This approach should work but there were two challenges to solve. Actually only one but I am going to go about it in a roundabout way so it feels like two: We need to convert an index from our proposed linear array to a vector--semantically, a set of matrix coordinates into the matrix, and to do do _that_ it is easiest to go the other way first. I.e., from a vector to an index.
 
  
 I am sure there is a way to derive such a formula (it is likely on a blog somewhere too) but I simply experimented on 2 and 3 dimensional arrays 
