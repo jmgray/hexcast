@@ -30,8 +30,10 @@ To run the program do the following:
   * `python hexcast sequence` displays the list of numbers to be emitted on subsequent calls. This works for a total element size of 1000 or less.
   * `python hexcast` emits the next number in the sequence
 
-An explanation of this approach is in `explanation.md`
-I should state that I spent a day pondering how to approach this problem 
+A fuller explanation of this program is in `explanation.md`
+
+
+I should state that I spent about a half a day pondering how to approach this problem 
 and about another 2 days creating and testing the system. Aside from some mechanical issues, 
 such as looking for easy ways to extract chunks of arrays, and getting `sympy` to quickly find large primes,
 I did not do any research in solving this.
