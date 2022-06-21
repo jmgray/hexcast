@@ -1,6 +1,6 @@
 
 #### Problem Statement
-1. Every time you run the program, it should emit one 8-digit hexadecimal code;
+1. Every time you run the program, it should emit one 8-digit hexadecimal code
 2. It should emit every possible code before repeating
 3. It should not print "odd-looking" codes such as `0xAAAAAAAA` or `0x01234567` or any commonly used words, phrases, or hexspeak such as `0xDEADBEEF`;
 4. Codes should be emitted in apparently random order.
@@ -72,12 +72,27 @@ And testing; if not thoroughly, at least enough to know that it basically works.
 this functionality and I am certain there are security holes in this. The only randomness at all is in the choice of starting index. 
 I thought about randomizing the step (`leap`) value, but that seemed too much for the goal at hand, which was just to complete this asessment.
 
+#### Filters
+The problem instructs that _odd-looking_ and obviously readable string should be avoided. This is what a normal person would say (i.e., someone who does not spend time thinking about effective ways to optimize algorithms just for fun) but it needs to be more precise to be useful in a program. `Hexcat` uses three filters to detect unacceptable string:
+ 
+* `HexSpeakFilter` compares the calculated string to a canned list of invalid hex snippets. These are found in `hslist.txt`
+* `MinimumUniqueDigitsFilter` verifies that the string contains at least 4 unique digits. This is meant to catch things like `AAAAABC`
+* `SequenceHexDigitsFilter` examines the string for number sequences. It enforces the following conditions:
+   * No sequence of 3 digits may be repeated anywhere in the string. So, bad: `ABCABCDE`, `02FAB02F`, good: `ABDABCDE`, `02FAB12F`
+   * No sequence of 2 digits may be repeated more than twice anywhere in the string: bad: `A121212B`, `C5C5C543`, good: `A121B212`, `C53C5C54`
+   * No consecutive sequence may be more than 3 digits: bad: `AAAAABCD`, `F1234EF`, good: `AAAADBCC`, `F12E42F`
+ 
+There could of course be many other variations on this theme that better target unusable strings but these seemed to suffice for this problem. 
+ 
+            
 
-
+ 
+ 
 <sup>1 I suspect that the calculation for a non-cubic space would entail just a small modification but I don't know it and did not care to explore the matter for this work. Perhaps you will!</sup>
 
 
 <sup>2</sup `T` stands for Tiers in the nomenclature of this program. Since we are ultimately dealing eith 8 dimensions it is not really precise to speak of "Tiers", but it is succinct and visually appealing. 
 
 
+ 
 
