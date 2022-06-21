@@ -34,7 +34,7 @@ A fuller explanation of this program is in `explanation.md`
 
 
 I should state that I spent about a half a day pondering how to approach this problem 
-and about another 2 days creating and testing the system. Aside from some mechanical issues, 
+and about another 2 days sporadically reassessing, creating and testing the system. Aside from some mechanical issues, 
 such as looking for easy ways to extract chunks of arrays, and getting `sympy` to quickly find large primes,
 I did not do any research in solving this.
 When I had resolved to follow this strategy, I gave the problem to a friend, 
