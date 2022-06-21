@@ -255,6 +255,8 @@ class Hexinator(object):
         if not validator.is_valid(hs):
             raise HexInvalidException()
 
+        return hs
+
     def _increment_index(self):
         next_index = (self.current_index + self.leap_distance) % self.linear_size
         self.current_index = next_index
