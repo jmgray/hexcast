@@ -91,7 +91,7 @@ There could of course be many other variations on this theme that better target 
 <sup>1 I suspect that the calculation for a non-cubic space would entail just a small modification but I don't know it and did not care to explore the matter for this work. Perhaps you will!</sup>
 
 
-<sup>2</sup `T` stands for Tiers in the nomenclature of this program. Since we are ultimately dealing eith 8 dimensions it is not really precise to speak of "Tiers", but it is succinct and visually appealing. 
+ <sup>2 `T` stands for Tiers in the nomenclature of this program. Since we are ultimately dealing eith 8 dimensions it is not really precise to speak of "Tiers", but it is succinct and visually appealing. </sup>
 
 
  
