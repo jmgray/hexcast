@@ -28,10 +28,10 @@ For a small matrix this gives you a pseudo-random walk but for a matrix of any s
 One tactic you might take would be to walk around the matrix taking larger steps. Instead of going to the next one in whatever your traversal mechanism is, jump two or three,or more places instead. I visualized that on a matrix but realized quickly that converting the matrix to a simple list makes this a tractable problem. With data in a linear format, this becomes a problem of rotating through the list. To make sure all of the items are visited, the size of the rotation--the step or "leap"--should ideally be co-prime to the size of the list. Simple prime numbers should work.
 
 
-This approach should work but there were two challenges to solve. Actually only one but I am going to go about it in a roundabout way so it feels like two: We need to convert an index from our proposed linear array to a vector--semantically, a set of matrix coordinates into the matrix, and to do do _that_ it is easiest to go the other way first. I.e., from a vector to an index.
+This approach seemed quite workable but there were two challenges to solve. Actually only one, but I am going to go about it in a roundabout way so it feels like two: We need to convert an index from our proposed linear array to a vector--semantically, a set of matrix coordinates into the matrix, and to do _that_ it is easiest to go the other way first. I.e., from a vector to an index.
 
  
-I am sure there is a way to derive such a formula (it is likely on a blog somewhere too) but I simply experimented on 2 and 3 dimensional arrays 
+I am sure there is a way to derive such a formula (I may have even done so in my university days) but I simply experimented on 2 and 3 dimensional arrays 
 with a few digits to ferret out a closed form for higher dimensions.
 
 
@@ -91,7 +91,7 @@ There could of course be many other variations on this theme that better target 
 <sup>1 I suspect that the calculation for a non-cubic space would entail just a small modification but I don't know it and did not care to explore the matter for this work. Perhaps you will!</sup>
 
 
- <sup>2 `T` stands for Tiers in the nomenclature of this program. Since we are ultimately dealing with 8 dimensions it is not really precise to speak of "Tiers", but it is succinct and visually appealing. </sup>
+ <sup>2 `T` stands for Tiers in the nomenclature of this program. Since we are ultimately dealing with 8 dimensions it is not really precise to speak of "Tiers", but it is succinct and visually appealing.</sup>
 
 
  
