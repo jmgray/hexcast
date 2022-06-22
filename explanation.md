@@ -64,16 +64,16 @@ Our indexc to vector convesion can be done by reversing the process by which we 
 
 With that, there is a way to get from index to vector and it is easy to get then from vector to a hex string. 
 All that is needed to complete the problem is a suitable storage mechanism for persisting each interation and some filtering
-and validating pieces to sidestep any unwanted hex strings. Voila. We have `Hexcast`
+and validating piecens to sidestep any unwanted hex strings. Voila. We have `Hexcast`
 
 
-Of course, I say that like the work is trivial, but it is not. Nonetheless, the strategy seems solid adn now begins the construction.
+Of course, I say that like the work is trivial, but it is not. Nonetheless, the strategy seems solid and now begins the construction.
 And testing; if not thoroughly, at least enough to know that it basically works. There are certainly more efficient ways to get
-this functionality and I am certain there are security holes in this. The only randomness at all is in the choice of starting index. 
-I thought about randomizing the step (`leap`) value, but that seemed too much for the goal at hand, which was just to complete this asessment.
+this functionality and I am certain too that there are security holes in this. The only randomness at all is in the choice of starting index. 
+I thought about randomizing the step (`leap`) value, but that seemed too much for the goal at hand, which was just to complete this and maybe learn something along the way.
 
 #### Filters
-The problem instructs that _odd-looking_ and obviously readable string should be avoided. This is what a normal person would say (i.e., someone who does not spend time thinking about effective ways to optimize algorithms just for fun) but it needs to be more precise to be useful in a program. `Hexcat` uses three filters to detect unacceptable string:
+The problem instructs that _odd-looking_ and obviously readable string should be avoided. This is what a normal person would say (i.e., someone who does not spend time thinking about effective ways to optimize algorithms just for fun) but it needs to be more precise to be useful in a program. `Hexcat` uses three filters to detect unacceptable strings:
  
 * `HexSpeakFilter` compares the calculated string to a canned list of invalid hex snippets. These are found in `hslist.txt`
 * `MinimumUniqueDigitsFilter` verifies that the string contains at least 4 unique digits. This is meant to catch things like `AAAAABC`
@@ -91,7 +91,7 @@ There could of course be many other variations on this theme that better target 
 <sup>1 I suspect that the calculation for a non-cubic space would entail just a small modification but I don't know it and did not care to explore the matter for this work. Perhaps you will!</sup>
 
 
- <sup>2 `T` stands for Tiers in the nomenclature of this program. Since we are ultimately dealing eith 8 dimensions it is not really precise to speak of "Tiers", but it is succinct and visually appealing. </sup>
+ <sup>2 `T` stands for Tiers in the nomenclature of this program. Since we are ultimately dealing with 8 dimensions it is not really precise to speak of "Tiers", but it is succinct and visually appealing. </sup>
 
 
  
