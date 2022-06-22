@@ -24,16 +24,17 @@ My first thoughts revolved around finding a sequence along a 2D matrix, the impl
 There are various ways in which you can walk through a 2D matrix: Row-wise, column-wise, diagonally, even spirally. 
 For a small matrix this gives you a pseudo-random walk but for a matrix of any size the pattern reveals itself quickly.
 
-
-Examples of small and large matrices, and their linear counterparts:
 ```
+Examples of small and large matrices, and their linear counterparts:
+
+
 A 3 x 3 matrix of 9 items
 
 00 01 02
 10 11 12
 20 21 22
 
-[00 01 02, 10, 11, 12, 20, 21, 22]  
+[00, 01, 02, 10, 11, 12, 20, 21, 22]  
 
 A 16 x 16 matrix of 256 items
 
@@ -50,6 +51,12 @@ FO F1 F2 F3 ... FF
 
 
 One tactic you might take would be to walk around the matrix taking larger steps. Instead of going to the next one in whatever your traversal mechanism is, jump two or three,or more places instead. I visualized that on a matrix but realized quickly that converting the matrix to a simple list makes this a tractable problem. With data in a linear format, this becomes a problem of rotating through the list. To make sure all of the items are visited, the size of the rotation--the step or "leap"--should ideally be co-prime to the size of the list. Simple prime numbers should work.
+
+```
+Starting at the 6th element and stepping through the 3 x 3 matrix above by 5's yields this sequence
+
+[12, 01, 20, 02, 21, 10, 22, 11, 00]
+```
 
 
 This approach seemed quite workable but there were two challenges to solve. Actually only one, but I am going to go about it in a roundabout way so it feels like two: We need to convert an index from our proposed linear array to a vector--semantically, a set of matrix coordinates into the matrix, and to do _that_ it is easiest to go the other way first. I.e., from a vector to an index.
