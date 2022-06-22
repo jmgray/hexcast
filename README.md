@@ -1,10 +1,9 @@
 # Hexcast
-This small project was created as an answer to the following interview question:
+In my travels through the sea of technology that encompasses us all I recently happened upon an interesting programmig challenge. This small project was created as an attempt to solve it. Said challenge: 
 
 
 ```
-We’d like you to write us a program that:
-Generates 8-digit hexadecimal codes to be used for 2FA.
+Write a program that generates 8-digit hexadecimal codes
 
 The rules are as follows:
 1. Every time you run the program, it should emit one 8-digit hexadecimal code;
@@ -83,7 +82,7 @@ To initialize the program to display random hexadecmial numbers type:<br>
 Now, you can display random hexadecimal numbers all day long:<br>
 ```
 python hexcast
-5C1CF369
+5C1CF369c
 
 python hexcast
 BE4F8ED6
@@ -96,8 +95,7 @@ If you are able to type this about `4,000,000,000` more times you will see `5C1C
 
 I should state that I spent about a half a day pondering how to approach this problem 
 and about another 2 days sporadically reassessing, creating and testing the system. Aside from some mechanical issues, 
-such as looking for easy ways to extract chunks of arrays, and getting `sympy` to quickly find large primes,
-I did not do any research in solving this.
-When I had resolved to follow this strategy, I gave the problem to a friend, 
+such as looking for easy ways to extract hunks of arrays, and getting `sympy` to quickly find large primes,
+I did not do any research in solving this. When I had resolved to follow this strategy, I gave the problem to a friend, 
 who found a solution in 20 minutes using a reversible encryption technique, something I don't know much about but probably should learn.
 We use what we know. :)
