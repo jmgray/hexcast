@@ -14,7 +14,7 @@ The rules are as follows:
 ```
 
 The approach embodied in this code was driven by several considerations:
-* The program needs to cycle through ~2^32 items without repeating.
+* The program needs to cycle through ~2<sup>32</sup> items without repeating.
 * It must somehow persist it's state between runs.
 * Item 4, `Codes should be emitted in apparently random order` implies that you must cycle through them cleverly.
 
