@@ -1,5 +1,5 @@
 # Hexcast
-In my travels through the sea of technology that encompasses us all I recently happened upon an interesting programmig challenge. This small project was created as an attempt to solve it. Said challenge: 
+In my travels through the sea of technology that encompasses us all I recently happened upon an interesting programming challenge. This small project was created as an attempt to solve it. Said challenge: 
 
 
 ```
