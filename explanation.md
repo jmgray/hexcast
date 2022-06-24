@@ -17,7 +17,7 @@
 Apologies for the somewhat academic tone here. It's just what I do. :)
 
 At first glance this does not seem to be that difficult. It is very straightforward to find a solution that will satisfy constraints `1`,`3` & `4`.
-However, at second glance it is clear the constraint `2` makes this a non-trivial problem. There are 2^<sup>32</sup> possible codes (16<sup>8</sup> == 2<sup>32</sup>) and we need to cycle through
+However, at second glance it is clear the constraint `2` makes this a non-trivial problem. There are 2<sup>32</sup> possible codes (16<sup>8</sup> == 2<sup>32</sup>) and we need to cycle through
 them without repeating, and the order needs to appear random. To restate the problem: we need to find a random-seeming sequence of numbers through a list of 2<sup>32</sup> items.
 
 My first thoughts revolved around finding a sequence along a 2D matrix, the implicit assumption being that if you can find a pattern in 2D, you can scale up to higher dimensions.
