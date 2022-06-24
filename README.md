@@ -61,7 +61,7 @@ Typing the following displays the sequence in which values will be displayed:<br
 Each element in this represents an item in the sequence. Each key is the number emitted (which is really just a 2D vector) and each value is the index within the list that corresponds to that item. See `explanation.md` for more details. If you don't see the above, then something is off.
 
 
-You can initialize the program to a different vector space by providing parameters for the vector size adn the matrix dimension. This command sets up a 3D matrix with 6 nodes per side, so 6^3 or 216 elements:<br>
+You can initialize the program to a different vector space by providing parameters for the vector size adn the matrix dimension. This command sets up a 3D matrix with 6 nodes per side, so 6<sup>3</sup> or 216 elements:<br>
 `python hexcast init 6 3`
 
 Each call shows 3D vectors whose digits are all `0-5`:<br>
