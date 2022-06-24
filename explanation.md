@@ -104,7 +104,7 @@ this functionality and I am certain too that there are security holes in this. T
 I thought about randomizing the step (`leap`) value, but that seemed too much for the goal at hand, which was just to complete this and maybe learn something along the way.
 
 #### Filters
-The problem instructs that _odd-looking_ and obviously readable string should be avoided. This is what a normal person would say (i.e., someone who does not spend time thinking about effective ways to optimize algorithms just for fun) but it needs to be more precise to be useful in a program. `Hexcat` uses three filters to detect unacceptable strings:
+The problem states that _odd-looking_ and obviously readable strings should be avoided. That is the kind of description a normal person would give (i.e., someone who does not spend time thinking about effective ways to optimize algorithms just for fun) but it needs to be more precise to be useful in a program. `Hexcat` uses three filters to detect unacceptable strings:
  
 * `HexSpeakFilter` compares the calculated string to a canned list of invalid hex snippets. These are found in `hslist.txt`
 * `MinimumUniqueDigitsFilter` verifies that the string contains at least 4 unique digits. This is meant to catch things like `AAAAABC`
@@ -114,10 +114,7 @@ The problem instructs that _odd-looking_ and obviously readable string should be
    * No consecutive sequence may be more than 3 digits: bad: `AAAAABCD`, `F1234EF`, good: `AAAADBCC`, `F12E42F`
  
 There could of course be many other variations on this theme that better target unusable strings but these seemed to suffice for this problem. 
- 
-            
-
- 
+             
  
 <sup>1 I suspect that the calculation for a non-cubic space would entail just a small modification but I don't know it and did not care to explore the matter for this work. Perhaps you will!</sup>
 
