@@ -76,7 +76,7 @@ python hexcast
 If you invoke it 216 times you will wind up at the beginning of the list.
 
 ### Hexadecimal output
-To initialize the program to display random hexadecmial numbers type:<br>
+To initialize the program to display random hexadecimal numbers type:<br>
 `python hexcast init 16 8`
 
 Now, you can display random hexadecimal numbers all day long:<br>
