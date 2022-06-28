@@ -18,7 +18,7 @@ The approach embodied in this code was driven by several considerations:
 * It must somehow persist it's state between runs.
 * Item 4, `Codes should be emitted in apparently random order` implies that you must cycle through them cleverly.
 
-A fuller explanation of this program is in `explanation.md`
+A fuller explanation of this program is in `explanation.md` (A friend came up with a much more compact solution [here](https://gist.github.com/jcttrll/e9533b01c9196809faf7dcf25978924b))
 
 To run the program do the following:
 1. create a virtual environment
