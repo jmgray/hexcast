@@ -86,7 +86,7 @@ or `V · T `
 
 
 Of course, this all by way of research since we don't really need to calculate the index--it is inherent in simply positing the array itself.
-Our indexc to vector convesion can be done by reversing the process by which we got the index value above; basically a series of divisions and "remaindings". We will iterate over the index, using a `T` array as listed above.<sup>2</sup<br>
+Our index to vector conversion can be done by reversing the process by which we got the index value above; basically a series of divisions and "remaindings". We will iterate over the index, using a `T` array as listed above.<sup>2</sup<br>
 
 `v0 = Floor(index / t0)`<br>
 `v1 = Floor((index - v0*t0) / t1)`<br>
@@ -95,7 +95,7 @@ Our indexc to vector convesion can be done by reversing the process by which we 
 
 With that, there is a way to get from index to vector and it is easy to get then from vector to a hex string. 
 All that is needed to complete the problem is a suitable storage mechanism for persisting each interation and some filtering
-and validating piecens to sidestep any unwanted hex strings. Voila. We have `Hexcast`
+and validating pieces to sidestep any unwanted hex strings. Voila. We have `Hexcast`
 
 
 Of course, I say that like the work is trivial, but it is not. Nonetheless, the strategy seems solid and now begins the construction.
