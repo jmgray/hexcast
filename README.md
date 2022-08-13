@@ -61,7 +61,7 @@ Typing the following displays the sequence in which values will be displayed:<br
 Each element in this represents an item in the sequence. Each key is the number emitted (which is really just a 2D vector) and each value is the index within the list that corresponds to that item. See `explanation.md` for more details. If you don't see the above, then something is off.
 
 
-You can initialize the program to a different vector space by providing parameters for the vector size adn the matrix dimension. This command sets up a 3D matrix with 6 nodes per side, so 6<sup>3</sup> or 216 elements:<br>
+You can initialize the program to a different vector space by providing parameters for the vector size and the matrix dimension. This command sets up a 3D matrix with 6 nodes per side, so 6<sup>3</sup> or 216 elements:<br>
 `python hexcast init 6 3`
 
 Each call shows 3D vectors whose digits are all `0-5`:<br>
@@ -78,6 +78,7 @@ If you invoke it 216 times you will wind up at the beginning of the list.
 ### Hexadecimal output
 To initialize the program to display random hexadecimal numbers type:<br>
 `python hexcast init 16 8`
+This creates an 8 dimension matrix with each element represented by 16 possible values. Ie., 2<sup>32</sup> hexadecimal numbers.
 
 Now, you can display random hexadecimal numbers all day long:<br>
 ```
