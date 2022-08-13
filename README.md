@@ -35,10 +35,10 @@ To run the program do the following:
 On the command line type the following:<br>
 `python hexcast init`<br>
 
-This initializes the default ini with the following, full details of which are in the `example.hfa.ini` file. Suffice to say it creates parameters to use a 4 x 2 matrix. This will contain 16 elements which will be "randomly" traversed:
+This initializes the default ini with the following, full details of which are in the `example.hfa.ini` file. Suffice to say it creates parameters to use a 4 x 2 matrix. Each element is a coordinate within this matrix: 00, 01, 02 03; 10, 11, 12, 13... This will contain 16 such elements which will be "randomly" traversed:
 ```
 [CYCLE]
-size = 4
+size = 4 
 dimension = 2
 leap = 7
 index = 3
