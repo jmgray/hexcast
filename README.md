@@ -78,6 +78,7 @@ If you invoke it 216 times you will wind up at the beginning of the list.
 ### Hexadecimal output
 To initialize the program to display random hexadecimal numbers type:<br>
 `python hexcast init 16 8`
+
 This creates an 8 dimension matrix with each element represented by 16 possible values. Ie., 2<sup>32</sup> hexadecimal numbers.
 
 Now, you can display random hexadecimal numbers all day long:<br>
