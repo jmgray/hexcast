@@ -86,7 +86,7 @@ or `V · T `
 
 
 Of course, this all by way of research since we don't really need to calculate the index--it is inherent in simply positing the array itself.
-Our index to vector conversion can be done by reversing the process by which we got the index value above; basically a series of divisions and "remaindings". We will iterate over the index, using a `T` array as listed above.<sup>2</sup<br>
+Our index to vector conversion can be done by reversing the process by which we got the index value above; basically a series of divisions and "remaindings". We will iterate over the index, using a `T` array as listed above.<sup>2</sup><br>
 
 `v0 = Floor(index / t0)`<br>
 `v1 = Floor((index - v0*t0) / t1)`<br>
